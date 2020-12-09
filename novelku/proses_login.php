@@ -31,8 +31,8 @@ if(mysqli_num_rows($result) == 1)
     $_SESSION['email'] = $row['email'];
     $_SESSION['is_login'] = true;
     $_SESSION['nama_user'] = $row['nama_user'];
-    $_SESSION['id_role'] = $row['id_role'];
-
+    
+	$_SESSION['id_role'] = $row['id_role'];
     // redirect
     echo "<script>
         window.location.replace('index.php?page=default');
@@ -46,8 +46,5 @@ else
         window.location.replace('index.php?page=login');
     </script>";
 }
-
-
-
 
 

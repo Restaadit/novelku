@@ -1,0 +1,75 @@
+user
+=====
+id_user (PK)     INT
+nama_user        VARCHAR(100)
+email            VARCHAR(50)
+password         VARCHAR(100)
+created_at       datetime
+updated_at       datetime
+soft_delete      tinyint
+
+
+novel
+=====
+id_novel(PK)    INT
+judul_novel     VARCHAR(255)   
+file_cover      VARCHAR(255)
+file_novel      VARCHAR(255)
+sinopsis        TEXT
+tgl_terbit      DATE
+id_user         INT
+created_at       datetime
+updated_at       datetime
+soft_delete      tinyint
+
+
+genre
+========
+id_genre (PK)   INT
+nama_genre      VARCHAR(50)
+created_at       datetime
+updated_at       datetime
+soft_delete      tinyint
+
+
+novel_genre
+============
+id_novel (PK)       INT
+id_genre (PK)       INT
+created_at       datetime
+updated_at       datetime
+soft_delete      tinyint
+
+
+review
+=======
+id_review (PK)        INT
+id_user                INT
+id_novel            INT
+isi_review        TEXT
+rating            DECIMAL(3,1)
+created_at       datetime
+updated_at       datetime
+soft_delete      tinyint
+
+
+user_follow
+===========
+id_user(PK)             INT
+id_user_followed (PK)    INT
+created_at       datetime
+updated_at       datetime
+soft_delete      tinyint
+
+
+genre_follow
+============
+id_genre (PK)            INT
+id_user (PK)             INT
+created_at       datetime
+updated_at       datetime
+soft_delete      tinyint
+
+
+
+

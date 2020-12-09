@@ -7,19 +7,13 @@ if(defined("GELANG") === false)
     die("Anda tidak boleh membuka halaman ini secara langsung!");
 }
 
-    $genre = $_POST['nama_genre'];
-
 if(isset($_GET['id']))
 {
-    // edit data
+    // hapus data
     $id = $_GET['id'];
-    $sql = "UPDATE genre SET nama_genre='$genre' where id_genre='$id'";
-}else {
+    $sql = "UPDATE genre SET soft_delete=1 where id_genre='$id'";
+}
 
-    // new data
-    $sql = "INSERT INTO genre (nama_genre) VALUES ('$genre')";
-
-    }
 
 mysqli_query($conn, $sql);
 

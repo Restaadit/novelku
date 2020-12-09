@@ -1,14 +1,14 @@
 <?php
-    // simpan dengan nama koneksi.php
+
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $db_name = "novel";
+    $db_name = "novelku";
 
-    // Create connection
+    //create connection
     $conn = new mysqli($servername, $username, $password, $db_name);
 
-    // Check connection
+    //check connection
     if($conn == false)
     {
         die("Connection failed: " . mysqli_connect_error());
